@@ -1,14 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import DatePickerDemo from './components/DatePickerDemo';
 
-function App() {
-  return (
-    <div className="App" style={{padding:100}}>      
-        <DatePickerDemo />
-    </div>
-  );
+class App extends React.Component{
+  constructor(props){
+    super(props);    
+    this.state = {
+      startDate: new Date()
+    };
+  }
+  render(){
+    return(
+      <div className="App" style={{padding:100}}>      
+        <DatePickerDemo startdate={this.state.startDate} />
+      </div>
+    )
+  }
 }
   
 export default App;
