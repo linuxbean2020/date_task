@@ -21,9 +21,11 @@ class DatePickerDemo extends Component{
     render() {
         return (
         <DatePicker
+            className='date_picker_class'
             selected={this.state.startDate}
             onChange={this.onDateSelected}
             minDate={this.state.startDate}
+            dateFormat="d MMMM yyyy"
         />
         );
     }

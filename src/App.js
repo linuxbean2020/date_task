@@ -5,10 +5,10 @@ import DatePickerDemo from './components/DatePickerDemo';
 
 function App() {
   return (
-    <div className="App">      
+    <div className="App" style={{padding:100}}>      
         <DatePickerDemo />
     </div>
   );
 }
-
+  
 export default App;
