@@ -6,12 +6,14 @@ class DatePickerDemo extends Component{
     constructor(props) {
         super(props);
         this.state = {
+            itemId: props.itemid,
             startDate: props.startdate
         };
         this.onDateSelected = this.onDateSelected.bind(this);       
     }
 
     onDateSelected(date) {
+        this.props.test(date,this.state.itemId);
         this.setState({
             startDate: date
           },() => { console.log('selectedDate',this.state.startDate); })
@@ -24,7 +26,6 @@ class DatePickerDemo extends Component{
             selected={this.state.startDate}
             onChange={this.onDateSelected}
             minDate={this.state.startDate}
-            // minDate = {<CurrentDate startDate/>}
             dateFormat="d MMMM yyyy"
         />
         );

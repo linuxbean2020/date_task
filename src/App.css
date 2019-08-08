@@ -40,7 +40,16 @@
   border: 1px solid gray;
   color:gray;
   font-family: 'Cabin', sans-serif;
+  text-align: center;
+  width: 230px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
+
+.react-datepicker-popper{
+  display: contents;
+}
+
 .react-datepicker__day.react-datepicker__day--selected {
   background: #fff;
   color: #1d5d90;
@@ -71,4 +80,165 @@
 .date_picker_class:focus{
   outline: none;
 }
+.slick-prev{
+  left: -50px;  
+}
+.slick-next:before, .slick-prev:before{
+  color:gray;
+  font-size: 100px;
 
+  position: relative;
+}
+.slick-next:before{
+  content: '\232a';
+}
+.slick-prev:before{
+  content: '\2329';
+}
+.slick-arrow.slick-prev:after{
+  content: 'Prev Quote';
+}
+.slick-arrow.slick-next:after{
+  content: 'Next Quote';
+}
+.slick-arrow.slick-prev:after, .slick-arrow.slick-next:after {  
+  background: gray;
+  z-index: 99999;
+  position: absolute;
+  color: gray;
+  bottom: -140px;
+  font-size: 17px;
+  width: max-content;
+  left: -20px;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.slick-next.slick-disabled:after, .slick-prev.slick-disabled:after {
+  opacity: .25;
+}
+.outer_div{
+  border:1px solid gray;
+  border-radius: 20px;
+  height: 200px;
+  width: 80% !important;
+  /* overflow: hidden; */
+}
+.outer_div:focus, .add_quote:focus, .show_date:focus{
+  outline: none;
+}
+
+.header_div {
+  background: #0375aa;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+.header_div h2{
+  margin: 0;
+  padding: 10px;
+  position: relative;
+}
+.header_div h2 small{
+  position: absolute;
+  top:10px;
+  left:15px;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 28px;
+  width: 4px;
+  background-color: rgb(255, 255, 255);
+}
+.close:before {
+  transform: rotate(35deg);
+}
+.close:after {
+  transform: rotate(-35deg);
+}
+.add_quote, .show_date{
+  margin-top:10px;
+  background: none;
+  color: #5ece5e;
+  border: 2px solid #5ece5e;
+  padding: 0px 30px;
+  border-radius: 20px;
+  font-size: 24px;
+}
+.add_quote h1{
+  margin: 10px 0;
+}
+.App{
+  padding:100px;
+}
+.slick-next, .slick-prev{
+  z-index: 999;
+}
+.slick-next, .slick-prev{
+  top:20% !important;
+}
+.add_quote_outer_div{
+  outline: none;
+}
+@media only screen and (max-width:768px){
+  .App{
+    padding:20px;
+  }
+  .slick-next, .slick-prev{
+    top:20% !important;
+  }
+  .slick-next{
+    right:0;
+  } 
+  .slick-prev{
+    left:-10px;
+  }
+  .add_quote {
+    font-size: 16px;
+  }
+  .date_picker_class{
+    width: 100px;
+    height: 16px;
+    font-size: 14px;
+  }
+  .header_div h2 {
+    font-size: 16px;
+  }
+  /* .outer_div {
+    width: 100% !important;
+  } */
+}
+
+@media only screen 
+and (min-width : 1024px) 
+and (max-width : 1200px)  { 
+  .date_picker_class{
+    font-size: 22px;
+    width: 165px;
+  }
+  .add_quote{
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 411px) and (max-width: 823px) and (orientation : landscape){
+  .date_picker_class{
+    font-size: 16px;
+    width: 135px;
+  }
+  .add_quote{
+    font-size: 15px;
+  }
+}

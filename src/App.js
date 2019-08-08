@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import DatePickerDemo from './components/DatePickerDemo';
+// import DatePickerDemo from './components/DatePickerDemo';
+import Carousel from './components/Carousel';
 
 class App extends React.Component{
   constructor(props){
@@ -11,8 +12,9 @@ class App extends React.Component{
   }
   render(){
     return(
-      <div className="App" style={{padding:100}}>      
-        <DatePickerDemo startdate={this.state.startDate} />
+      <div className="App" >      
+        <Carousel maxItems='4' baseItem='3'/>
+        {/* <DatePickerDemo startdate={this.state.startDate} /> */}
       </div>
     )
   }
